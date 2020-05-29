@@ -34,6 +34,11 @@ Route::get('/sign_in', function () {
     return view('sign_in');
 });
 
+Route::get('/sign_in', function () {
+    return view('sign_in');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
