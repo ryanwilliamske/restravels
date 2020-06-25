@@ -50,5 +50,9 @@ Route::post('messages',
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
 
