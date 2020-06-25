@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,8 +40,15 @@ Route::get('/sign_in', function () {
 Route::get('/sign_in', function () {
     return view('sign_in');
 });
+Route::get('/chat', 
+           'ChatController@index');
+Route::get('messages', 
+           'ChatController@fetchMessages');
+Route::post('messages', 
+            'ChatController@sendMessage');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
