@@ -60,11 +60,12 @@
                                 Don't have an account? <a href="<?php echo e(route('register')); ?>" class="loginhere-link">Sign Up here</a>
                                     </p>
                                     <p class="loginhere">
-                                    Forgot your passowrd!
+                                   <!-- Forgot your passowrd!
+                                    
                                     @if (Route::has('password.request'))
                                     <a href="{{ route('password.request') }}" class="loginhere-link">Reset here</a>
                                     @endif
-                                     </p>
+                                     </p>    -->
 
                            
                     </form>

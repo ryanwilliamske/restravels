@@ -40,6 +40,7 @@
                                     </span>
                                 @enderror
                         </div>
+                       
                         <div class="input-group">
                             <input  class="input--style-3" type="text" placeholder="Last Name" name="lname" value="{{ old('lname') }}" required>
                             @error('lname')
@@ -48,9 +49,25 @@
                                     </span>
                                 @enderror
                         </div>
+                         <div class="input-group">
+                            <input  class="input--style-3" type="text" placeholder="Address" name="address" value="{{ old('address') }}" required>
+                            @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
                         <div class="input-group">
                             <input  class="input--style-3" type="text" placeholder="City" name="city" value="{{ old('city') }}" required>
                             @error('city')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+                        <div class="input-group">
+                            <input  class="input--style-3" type="text" placeholder="Country" name="country" value="{{ old('contry') }}" required>
+                            @error('lname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
