@@ -116,7 +116,7 @@
     <div class="col-8">
       <div class="row">
         <div class="col">
-          <div class="card px-lg-5 px-rg-5 py-3" style="width: 100%">
+          <div class="card px-lg-5 px-rg-5 py-3 mb-3" style="width: 100%">
             <p class="h1">Destinations</p>
             <div class="row">
               <div class="col">
@@ -135,7 +135,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="card px-lg-5 py-3" style="width: 100%">
+          <div class="card px-lg-5 py-3 mb-3" style="width: 100%">
             <p class="h1">Experiences</p>
             <div class="row">
               <div class="col">
@@ -150,7 +150,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="card px-lg-5 py-3" style="width: 100%">
+          <div class="card px-lg-5 py-3 mb-3" style="width: 100%">
             <p class="h1">Ongoing Contracts</p>
             <div class="row">
               <div class="col">
