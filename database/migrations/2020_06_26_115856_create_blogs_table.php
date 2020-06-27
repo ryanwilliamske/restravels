@@ -17,9 +17,11 @@ class CreateBlogsTable extends Migration
             $table->bigIncrements('blog_id');
             $table->string('blog_title');
             $table->longText('blog_body');
-            //add user foreign key later
-            
-            $table->timestamps('blog_created');
+
+            $table->unsignedBigInteger('id');
+            $table->string('blogImg');
+
+            $table->timestamps();
         });
     }
 
