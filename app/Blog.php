@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     //
-    protected $primaryKey = 'blog_id';
+    public $table = 'blogs';
+    public $primaryKey = 'blog_id';
+    public $timestamps = true;
 
-    
 }
