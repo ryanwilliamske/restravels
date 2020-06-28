@@ -38,20 +38,9 @@ class BlogController extends Controller
     {
         $validateBlog = $request->validate([
             'blog_title' => 'required|max:255',
-            'blog_body' => 'required',
+            'blog_b0dy' => 'required',
 
         ]);
-
-        $blog = new Blog;
-        $blog->blog_title = $request->input('blog_title');
-        $blog->blog_body = $request->input('blog_body');
-
-        //Missing functionalities: adding user IDs, will add later
-        $blog->save();
-
-        return redirect('/home')->with('success','Blog Posted');
-
-
     }
 
     /**

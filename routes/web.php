@@ -24,8 +24,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/blog', function(){
-    return view('blogsubmit');
-});
-Route::resource('blog1','BlogController');
