@@ -13,56 +13,6 @@
 
 </head>
 <body>
-<!-- <div class="container">
-  <nav class="navbar navbar-expand-lg" style="background-color: #f7f7f7;">
-    <a class="navbar-brand mr-auto" href="#">
-      <img src="{{ asset('storage/AST Logo.png') }}" alt="Aspera Travels Logo" width="50px" id="logo">
-    </a>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item col-3 active">
-          <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item col-3">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item col-3">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item col-3">
-          <a class="nav-link" href="#">Sign In</a>
-        </li>
-        <li class="nav-item col-3">
-          <a class="nav-link" href="#">Sign Up</a>
-        </li>
-      </ul>
-    </div>
-
-  </nav>
-</div>
-
-<div class="jumbotron" style="background-color: #f7f7f7;">
-  <div class="row">
-    <div class="col-1">
-      <p class="h1">Aspera Travels</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <p class="h3">Experience the best trips in style and in safety</p>
-    </div>
-    <div class="col-9">
-      <img src="{{ asset('storage/Car_family.png') }}" alt="Aspera Travels Logo" width="800px" id="">
-    </div>
-  </div>
-  <div class="row justify-content-center mt-5">
-    <div class="col-lg-2">
-      <img src="{{ asset('storage/scroll_arrows.png') }}" alt="Aspera Travels Logo" width="20px" id="">
-    </div>
-  </div>
-</div> -->
-
 <nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand mr-auto" href="#">
