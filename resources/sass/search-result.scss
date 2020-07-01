@@ -1,0 +1,16 @@
+.search-results-container{
+ min-height: 500px;
+ margin: 20px auto;
+ 
+   a{
+    color: purple;
+     &:hover {
+       text-decoration: underline;
+     }
+   }
+}
+
+.results-count{
+ margin-bottom: 20px;
+
+}
