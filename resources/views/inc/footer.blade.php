@@ -1,11 +1,16 @@
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/footer.css')}}" />
+<!--  -->
+<!-- To edit the color of the footer -->
+<!--  Go to public/css/footer.css-->
+<!-- Edit .footer-class-container{ background-color: }  -->
 <footer>
     <div class="footer-class-container">
         <div class="footer-class">
             <div class="logo-footer" style="text-align: center;">
-                <h1>Aspera <br> Tours</h1>
+                <h1 data-aos="flip-left" data-aos-duration="1000">Aspera <br> Tours</h1>
 
             </div>
-            <div class="footer-info" data-aos="zoom-out-right" data-aos-duration="2000">
+            <div class="footer-info" data-aos="zoom-out-right" data-aos-duration="1000">
                 <h2>Find us at</h2>
                 <div class="icon-1">
                     <span><i class="fa fa-lg fa-map-marker"></i></span>
@@ -34,7 +39,7 @@
         <div style="width: 90%; margin: auto;">
             <hr>
         </div>
-        <div class="social-links" style="text-align: center;">
+        <div class="social-links" style="text-align: center;" data-aos="flip-left" data-aos-duration="2000">
             <i class="fa fa-3x fa-facebook-official"></i>
             <i class="fa fa-3x fa-twitter-square"></i>
             <i class="fa fa-3x fa-telegram"></i>
@@ -47,3 +52,10 @@
         </div>
     </div>
 </footer>
+<!-- Footer animation and icons dependency -->
+<script src="https://use.fontawesome.com/452826394c.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
