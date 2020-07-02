@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+ @section('extra-css')
+
+    <link rel="stylesheet" href="{{ asset('css/algolia.css') }}"> 
+    
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -20,4 +26,15 @@
         </div>
     </div>
 </div>
+@endsection
+
+
+@section('extra-js')
+
+    <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+        <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+        <script src="{{ asset('js/algolia.js') }}"></script>
+    
+    
 @endsection
