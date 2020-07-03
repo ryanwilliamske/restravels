@@ -1,5 +1,7 @@
 <?php
 
+use App\Reviews;
+use App\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,9 +30,7 @@ Route::get('/about', function () {
 Route::get('/services', function () {
     return view('services');
 });
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile', 'ProfileController@index');
 Route::get('/sign_in', function () {
     return view('sign_in');
 });
@@ -39,7 +39,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/footer', function () {
+    return view('inc\footer');
+});
+
 Route::get('/search', 'ServiceController@search')->name('search');
 
 Route::get('/search/{service}', 'ServiceController@show')->name('services.show');
-

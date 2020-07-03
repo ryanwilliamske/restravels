@@ -1,6 +1,7 @@
 .footer-class-container {
     border: 1px solid black;
     background-color: #0099FF;
+    /* background-color:#51aece; */
     background-image: url(/images/wave.svg);
     background-repeat: no-repeat;
 
