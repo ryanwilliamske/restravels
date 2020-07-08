@@ -14,7 +14,7 @@
                           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/blog_feed/">Blogs Feed</a>
+                          <a class="nav-link" href="/blogs">Blogs Feed</a>
                         </li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genres</a>
@@ -29,7 +29,7 @@
                               <li class="nav-item">
                                 <a class="nav-link" href="#">About</a>
                               </li>
-                              
+
                             </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -50,15 +50,15 @@
 
                         <!--
                             This is the search key input on the navbar
-                            It performs two operation: 
+                            It performs two operation:
                                     ~Dynamic dropdown for products
                                     ~Submits and presents results from a particular search
                         -->
-                        
+
                         <form action=" {{ route('search') }}" method="GET" class="form-inline my-2 my-lg-0">
                             @csrf
                             <div class="aa-input-container" id="aa-input-container">
-                                <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for players or services..." name="service" autocomplete="off" 
+                                <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for players or services..." name="service" autocomplete="off"
                                 value=" {{ request()->input('service') }}"
                                 />
                                     <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
@@ -66,7 +66,7 @@
                                     </svg>
                             </div>
                             </form>
-                      
+
 
                             </ul>
                             <li class="nav-item dropdown">
@@ -86,7 +86,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                   
+
                                     <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                 </div>
                             </li>

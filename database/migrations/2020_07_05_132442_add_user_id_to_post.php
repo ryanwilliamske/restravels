@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddBlogConstraint extends Migration
+class AddUserIdToPost extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class AddBlogConstraint extends Migration
      */
     public function up()
     {
-        Schema::table('blogs', function (Blueprint $table) {
-            $table->foreign('id')->
-                references('id')->
-                on('users')->
-                onDelete('cascade');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->integer('user_id');
         });
     }
 
@@ -28,8 +25,8 @@ class AddBlogConstraint extends Migration
      */
     public function down()
     {
-        Schema::table('blogs', function (Blueprint $table) {
-            $table->dropColumn('id');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('user_id');
         });
     }
 }

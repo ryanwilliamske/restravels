@@ -46,3 +46,18 @@ Route::get('/footer', function () {
 Route::get('/search', 'ServiceController@search')->name('search');
 
 Route::get('/search/{service}', 'ServiceController@show')->name('services.show');
+//BLOG ROUTES
+
+Route::get('/upload', function () {
+    return view('blogs.upload');
+});
+
+Route::get('/myblogs', 'CurrentUserBlogsController@index');
+
+Route::get('/blogs/tags/{tag}','TagsController@index');
+Route::get('/blogdetails', function () {
+    return view('blogs.blogdetails');
+});
+Route::resource('blogs','PostsController');
+Route::post('/blogs/{post}/comments', 'CommentsController@store');
+//BLOG ROUTES

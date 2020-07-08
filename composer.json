@@ -17,6 +17,7 @@
         "laravel/scout": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "laravelcollective/html": "^6.1",
         "nicolaslopezj/searchable": "^1.13"
     },
     "require-dev": {
