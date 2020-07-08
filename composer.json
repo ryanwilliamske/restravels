@@ -17,7 +17,8 @@
         "laravel/scout": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
-        "nicolaslopezj/searchable": "^1.13"
+        "nicolaslopezj/searchable": "^1.13",
+        "realrashid/sweet-alert": "^3.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

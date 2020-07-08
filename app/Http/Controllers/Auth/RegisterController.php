@@ -76,4 +76,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+     protected function authenticated(Request $request, User $user) {
+
+        return redirect()->intended($this->redirectPath())->with('success', 'Successfully Logged In');
+    }
 }
