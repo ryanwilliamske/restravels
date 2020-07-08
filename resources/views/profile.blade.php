@@ -54,7 +54,7 @@
                     </div>
                     @foreach($user as $user)
                     <div class="card-body">
-                        <p class="success"> {{ session('message')}}</p>
+                        <p class="success" style="color: #3cc21e;"> {{ session('message')}}</p>
                         <form action="/profile" method="POST">
                             @csrf
                             <h5 class="card-title">{{ $user->fname}}<br>{{ $user->lname}}</h5>
