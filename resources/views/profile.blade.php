@@ -54,17 +54,44 @@
                     </div>
                     @foreach($user as $user)
                     <div class="card-body">
-                        <h5 class="card-title">{{ $user->fname}}<br>{{ $user->lname}}</h5>
-                        <h5 class="card-text">Email</h5>
-                        <p class="h6">{{ $user->email}}</p>
-                        <h5 class="card-text">Address</h5>
-                        <p class="h6">Phenom Estate<br>{{$user->city}}, Kenya</p>
-                        <h5 class="card-text">Award</h5>
-                        <p class="h6">Globe Trotter</p>
-                        <a href="#" class="btn btn-primary btn-block">Edit Profile</a>
+                        <p class="success"> {{ session('message')}}</p>
+                        <form action="/profile" method="POST">
+                            @csrf
+                            <h5 class="card-title">{{ $user->fname}}<br>{{ $user->lname}}</h5>
+                            <input type="hidden" name="fname" value="{{ $user->fname}}" required>
+                            <input type="hidden" name="lname" value="{{ $user->lname}}" required>
+                            <h5 class="card-text">Email</h5>
+                            <p class="h6">{{ $user->email}}</p>
+                            <input type="hidden" name="email_add" id="email" value="{{ $user->email}}" required>
+                            <h5 class="card-text">Address</h5>
+                            <p class="h6">Phenom Estate<br>{{$user->city}}, Kenya</p>
+                            <input type="hidden" name="city" value="{{ $user->city}}" required>
+                            <h5 class="card-text">Award</h5>
+                            <p class="h6">Globe Trotter</p>
+                            <a href="{{ url('/password/reset')}}" target="_blank">Reset Password</a>
+                            <a href="#" class="btn btn-primary btn-block" onclick="editFunction()" id="edit_btn">Edit Profile</a>
+                            <button class="btn btn-primary btn-block" type="submit" value="Save Profile" id="Save_prof" style="display:none;">Save Profile</button>
+                        </form>
+
                     </div>
                     @endforeach
                 </div>
+                <script>
+                    function editFunction() {
+                        var button_edit = document.getElementById("edit_btn").style.display = "none";
+                        var button_save = document.getElementById("Save_prof").style.display = "block";
+
+                        var inputs = document.getElementsByTagName("input");
+                        for (let index = 1; index < inputs.length; index++) {
+                            const element = inputs[index].setAttribute("type", "text");
+                            if (index == 3) {
+                                inputs[index].setAttribute("type", "email");
+
+                            }
+                        }
+
+                    }
+                </script>
             </div>
             <div class="col-8">
                 <div class="row">

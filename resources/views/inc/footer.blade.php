@@ -48,7 +48,7 @@
             <hr>
         </div>
         <div class="copyright" style="text-align: center; padding: 30px;">
-            <span><i class="fa fa-lg fa-copyright"></i>Copyright2020: Rest team</span>
+            <span><i class="fa fa-lg fa-copyright"></i>Copyright2020:AsperaTravels</span>
         </div>
     </div>
 </footer>
