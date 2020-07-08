@@ -13,6 +13,7 @@ use RealRashid\SweetAlert\Facades\Alert;
  Route::get('/', function(){
 
     // Alert::success('Success', 'Successfully Logged In');
+    // example:
 
      return view('home');
  });

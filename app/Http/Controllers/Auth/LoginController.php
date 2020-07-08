@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\User;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class LoginController extends Controller
@@ -26,9 +27,11 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-   protected function authenticated(Request $request, User $user) {
-
-        return redirect()->intended($this->redirectPath())->with('success', 'Successfully Logged In');
+   protected function authenticated(Request $request, User $user) 
+   {
+    
+        Alert::success('Success', 'Successfully Logged In');
+        return redirect()->intended($this->redirectPath());
     }
     
 }

@@ -41,4 +41,4 @@
   </div>
   
   <button type="submit" class="btn btn-primary">Update Profile <i class="fa fa-save ml-2"></i></button>
-  <button type="reset" class="btn btn-light">Reset Changes</button>
+  

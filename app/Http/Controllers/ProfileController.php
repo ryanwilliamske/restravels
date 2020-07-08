@@ -24,8 +24,7 @@ class ProfileController extends Controller
         $blogs = Blog::where('id', $user_details->id)->get();
 
 
-       
-       return view('profile.show', compact('user_details', 'blogs'));
+        return view('profile.show', compact('user_details', 'blogs'));
     }
 
     public function profileInfoUpdate()
@@ -33,33 +32,53 @@ class ProfileController extends Controller
         
         $id = auth()->user()->id;
 
+        
+
         $validator = Validator::make( request()->all(), [
             'fname' => 'required',
             'lname' => 'required',
             'city' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'nullable|min:8,255',
-            'confirm' => 'nullable|same:password'
+            'confirm' => 'nullable|same:password',
+            'phone' => 'required|max:10|min:10|integer'
         ]);
 
         if ( $validator->fails()) {
-             return back()->with('toast_error', $validator->messages()->all()[0])->withInput();
+            toast($validator->messages()->all()[0],'error')->autoClose(3000);
+             return back();
         }
 
+        
        /**
         * Perform the relevant profile update
+        * If the password field is empty, we first retrieve current
+        * user password so that no reset occurs
+        * to avoid null password 
         */
-
+        if( empty(request()->password) ){
+            $current_user_password = auth()->user()->password;
+            $password = $current_user_password;
+            request()->password = $current_user_password;
+            request()->confirm = request()->password;
+        }else{
+            $password = Hash::make(request()->password);
+            request()->password = $password;
+        }
+        
 
         User::where('id', $id)->update([
             'fname' => request()->fname,
             'lname' => request()->lname,
             'city' => request()->city,
             'email' => request()->email,
-            'password' => Hash::make(request()->password)
+            'password' => $password,
+            'phone' => request()->phone
         ]);
 
-        
-        return redirect('/profile')->with('toast_success', 'Update Successful!!');
+
+        toast('Update Successful!!','success')->autoClose(3000)->timerProgressBar();
+        return redirect()->route('profile.show');
+
     }
 }

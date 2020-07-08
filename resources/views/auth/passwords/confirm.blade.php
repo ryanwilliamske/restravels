@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+
+@section('extra-css')
+
+    <link rel="stylesheet" href="{{ asset('css/algolia.css') }}"> 
+
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
+    
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

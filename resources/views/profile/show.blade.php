@@ -9,7 +9,10 @@
 @endsection
 
 
+
+
    @section('content')
+
 
   <form action=" {{ route('profile.show') }} " method="post">
     <div class="container">

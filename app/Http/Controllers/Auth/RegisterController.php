@@ -8,6 +8,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -65,20 +67,30 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    // protected function create(array $data)
+    // {
+    //     return User::create([
+    //         'fname' => $data['fname'],
+    //         'lname' => $data['lname'],
+    //         'city' => $data['city'],
+    //         'email' => $data['email'],
+    //         'phone' => $data['phone'],
+    //         'password' => Hash::make($data['password']),
+    //     ]);
+    // }
+
+    public function Register(Request $request)
     {
-        return User::create([
-            'fname' => $data['fname'],
-            'lname' => $data['lname'],
-            'city' => $data['city'],
-            'email' => $data['email'],
-            'phone' => $data['phone'],
-            'password' => Hash::make($data['password']),
+         User::create([
+            'fname' => $request->fname,
+            'lname' => $request->lname,
+            'city' => $request->city,
+            'email' => $request->email,
+            'phone' => $request->email,
+            'password' => Hash::make($request->password),
         ]);
+        
+        return redirect()->intended($this->redirectPath());
     }
-
-     protected function authenticated(Request $request, User $user) {
-
-        return redirect()->intended($this->redirectPath())->with('success', 'Successfully Logged In');
-    }
+     
 }
