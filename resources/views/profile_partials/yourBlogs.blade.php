@@ -32,11 +32,11 @@
                 </div>
 
                   <div class="col-2">
-                      <a href="{{ route('blogs.edit', ['id' => Crypt::encrypt($blog->id)]) }} " class="btn btn-success">Edit <i class="fa fa-edit ml-3"></i></a>
+                      <a href="{{ route('blogs.edit') }} " class="btn btn-success">Edit <i class="fa fa-edit ml-3"></i></a>
                   </div>
    
                   <div class="col">
-                          <form action="{{ route('dashboard', ['id' => Crypt::encrypt($blog->id)])  }}" method="POST">
+                          <form action="{{ route('')  }}" method="POST">
                                 @csrf
                                 @method('DELETE')
 
