@@ -69,7 +69,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        //new changes
+
+        $user= User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'address' => $data['address'],
@@ -79,5 +81,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
         ]);
+        $user->attachRole('user');
+        return $user;
     }
 }
