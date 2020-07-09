@@ -31,6 +31,9 @@ Route::get('/services', function () {
     return view('services');
 });
 Route::get('/profile', 'ProfileController@index');
+
+Route::post('/profile', 'ProfileController@store');
+
 Route::get('/sign_in', function () {
     return view('sign_in');
 });
@@ -38,10 +41,6 @@ Route::get('/sign_in', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/footer', function () {
-    return view('inc\footer');
-});
 
 Route::get('/search', 'ServiceController@search')->name('search');
 
