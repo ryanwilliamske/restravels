@@ -45,3 +45,24 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search', 'ServiceController@search')->name('search');
 
 Route::get('/search/{service}', 'ServiceController@show')->name('services.show');
+
+Route::get('/package', function () {
+    return view('package');
+});
+
+Route::get('/Packages/nairobi', function () {
+    return view('/Packages/nairobi');
+});
+
+Route::get('/Packages/mombasa', function () {
+    return view('/Packages/mombasa');
+});
+
+Route::get('/Packages/nakuru', function () {
+    return view('/Packages/nakuru');
+});
+
+Route::get('/Packages/kisumu', function () {
+    return view('/Packages/kisumu');
+});
+
