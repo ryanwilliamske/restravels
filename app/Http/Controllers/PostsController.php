@@ -156,7 +156,7 @@ class PostsController extends Controller
             $post->cover_image = $filenametostore;
         }
         $post->save();
-        return redirect('/posts')->with('success', 'Post Edited!');
+        return redirect('/blogs')->with('success', 'Post Edited!');
     }
 
     /**
@@ -172,6 +172,6 @@ class PostsController extends Controller
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
         $post->delete();
-        return redirect('/posts')->with('success', 'Post Deleted!');
+        return redirect('/blogs')->with('success', 'Post Deleted!');
     }
 }

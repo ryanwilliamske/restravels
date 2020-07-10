@@ -39,8 +39,8 @@ Route::get('/sign_in', function () {
 });
 //BLOG ROUTES
 
-Route::get('/upload', function () {
-    return view('blogs.upload');
+Route::get('/upload2', function () {
+    return view('blogs.upload2');
 });
 Route::get('/upload', 'PostsController@uploadpage');
 Route::get('/layoutf', function () {

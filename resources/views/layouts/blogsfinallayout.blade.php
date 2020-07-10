@@ -90,14 +90,11 @@
 </div>
 
 <!--Services Card-->
-<div class="container-fluid">
-    <div class="jumbotron" style="background-color: #51AECE">
 
             @yield('content')
 
 
-    </div>
-</div>
+
 <br>
 <br>
 <br>
