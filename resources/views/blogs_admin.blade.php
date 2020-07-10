@@ -157,7 +157,15 @@
                                                 <td>{{$row['id']}}</td>
                                                 <td>{{$row['title']}}</td>
                                                 <td>{{$row['created_at']}}</td>
-                                                <td>{{$row['fname']}}</td>    </tr>
+                                                <td>{{$row['fname']}}</td>  
+                                                <td>
+                                            <form action="{{ route('blogs_admin.delete', $row['id']) }}" method="POST">
+                                                     @csrf
+                                                     @method('delete')
+                                         <button type="submit" class="btn btn-outline-danger">Delete</button>
+                             </form></td>
+                                                
+                                                </tr>
                                                
                                                 
                                              
