@@ -28,7 +28,7 @@
     }
 
     .img>img {
-        width: 160px;
+        width: 300px;
         height: 200px;
     }
 
@@ -46,127 +46,56 @@
         }
 
     }
+
+    .hire_action {
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 
 <div class="action-divs-container">
     <div class="action">
         <div class="img">
-            <img src="assets/trading.svg" alt="Image1" />
+            <img src="/images/nissan2.jpg" alt="Image1" />
         </div>
         <div>
-            <h3>Tour travel Bus</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
-        </div>
-    </div>
-    <div class="action">
-        <div class="img">
-            <img src="assets/phone.svg" alt="Image1" />
-        </div>
-        <div>
-            <h3>Nissan Tour Bus</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
+            <h3>Tour travel Nissan</h3>
         </div>
 
-    </div>
-    <div class="action">
-        <div class="img">
-            <img src="assets/ratings.svg" alt="Image1" />
-        </div>
-        <div>
-            <h3>Private Vehicle</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
+        <div class="hire_action">
+            <p style="font-size: 24px; margin:8px">Price:<span>100</span></p>
+            <button>Hire now</button>
         </div>
     </div>
+
     <div class="action">
         <div class="img">
-            <img src="assets/trading.svg" alt="Image1" />
+            <img src="/images/8seater.jpg" alt="Image1" />
         </div>
         <div>
-            <h3>Tour travel Bus</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
-        </div>
-    </div>
-    <div class="action">
-        <div class="img">
-            <img src="assets/phone.svg" alt="Image1" />
-        </div>
-        <div>
-            <h3>Nissan Tour Bus</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
+            <h3>Nissan travel 9 seater</h3>
         </div>
 
-    </div>
-    <div class="action">
-        <div class="img">
-            <img src="assets/ratings.svg" alt="Image1" />
-        </div>
-        <div>
-            <h3>Private Vehicle</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
+        <div class="hire_action">
+            <p style="font-size: 24px; margin:8px">Price:<span>100</span></p>
+            <button>Hire now</button>
         </div>
     </div>
+
     <div class="action">
         <div class="img">
-            <img src="assets/trading.svg" alt="Image1" />
+            <img src="/images/bus.jpg" alt="Image1" />
         </div>
         <div>
-            <h3>Tour travel Bus</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
-        </div>
-    </div>
-    <div class="action">
-        <div class="img">
-            <img src="assets/phone.svg" alt="Image1" />
-        </div>
-        <div>
-            <h3>Nissan Tour Bus</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
+            <h3>Travel Bus</h3>
         </div>
 
-    </div>
-    <div class="action">
-        <div class="img">
-            <img src="assets/ratings.svg" alt="Image1" />
-        </div>
-        <div>
-            <h3>Private Vehicle</h3>
-        </div>
-        <div style="display: flex; justify-content:space-between">
-            <p>Price:</h1>
-                <p>100</p>
-                <button>Hire</button>
+        <div class="hire_action">
+            <p style="font-size: 24px; margin:8px">Price:<span>100</span></p>
+            <button>Hire now</button>
         </div>
     </div>
+
+
+
 </div>
