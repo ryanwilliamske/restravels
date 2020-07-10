@@ -15,81 +15,105 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand mr-auto" href="#">
-        <img src="{{ asset('images/AST Logo.png') }}" alt="Aspera Travels Logo" width="50px" id="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarReponsive">
-        <span class="navbar-toggler-icon"><img src="{{ asset('images/menu_lines.svg') }}" alt="Aspera Travels Logo" width="20px" id=""></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link " href="{{ url('/landing') }}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{ url('/about') }}">About Us</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{ url('/services') }}">Services</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{ url('/profile') }}">Profile</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{ url('/sign_up') }}">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+
+  @include('inc.navbar')
 
   <!--Welcome header "Jumbotron"-->
   <div class="container-fluid">
-    <div class="row jumbotron mb-0">
-      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+    <div class="row jumbotron mb-5">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
         <p class="h1">Aspera Travels</p>
         <p class="lead">Experience the best trips in safety and in style</p>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
-        <img src="{{ asset('images/Car_family.png') }}" alt="Aspera Travels Logo" width="900px" id="">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <img src="{{ asset('images/Car_family.png') }}" alt="Aspera Travels Logo" width="800px" id="">
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center mt-5">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center mt-4">
         <p class="h6">Scroll for more</p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
         <img src="{{ asset('images/scroll_arrows.png') }}" alt="Aspera Travels Logo" width="20px" id="">
       </div>
     </div>
-  </div>
 
-  <!--About section-->
-  <div class="container-fluid padding">
-    <div class="row jumbotron pl-5 pb-0 mb-0">
-      <div class="col-lg-3 col-xl-3 pl-3">
-        <img src="{{ asset('images/Car_road.svg') }}" alt="Aspera Travels Logo" width="300px" id="">
+    <!--About section-->
+    <div class="container-fluid mt-5">
+      <div class="row jumbotron pl-5 pb-0 mb-0">
+        <div class="col-lg-3 col-xl-3 pl-3">
+          <img src="{{ asset('images/Car_road.svg') }}" alt="Aspera Travels Logo" width="300px" id="">
+        </div>
+        <div class="col-lg-3 col-lg-3 pt-5 ml-5">
+          <p class="h1">Fast and Effective</p>
+          <img src="{{ asset('images/Speedometer.svg') }}" alt="Aspera Travels Logo" width="700px" id="">
+        </div>
+        <div class="col-lg-3 col-lg-3 pt-5 ml-5 text-center">
+          <button type="button" class="btn btn-outline-primary">About us</button>
+          <p class="lead">Our services are swift and will never let you down</p>
+        </div>
       </div>
-      <div class="col-lg-3 col-lg-3 pt-5 ml-5">
-        <p class="h1">Fast and Effective</p>
-        <img src="{{ asset('images/Speedometer.svg') }}" alt="Aspera Travels Logo" width="700px" id="">
-      </div>
-      <div class="col-lg-3 col-lg-3 pt-5">
-        <button type="button" class="btn btn-outline-primary">About us</button>
-        <p class="lead">Our services are swift and will never let you down</p>
-      </div>
-    </div>
-  </div>
 
-  <!--Services Card-->
-  <div class="container-fluid">
-    <div class="row jumbotron" style="background-color: #51AECE">
-      <div class="card">
+      <!--Services Card-->
+      <div class="container-fluid mt-4">
+        <div class="row jumbotron justify-content-end">
+          <div class="col mt-5">
+            <p class="lead justify-content-start">Our packages are wholesome and for the entire family</p>
+            <button type="button" class="btn btn-outline-primary">Sign Up</button>
+          </div>
+          <div class="card-deck">
+            <div class="card" style="max-width: 18rem;">
+              <img src="{{ asset('images/Car_hire.png') }}" class="card-img-top" width="162px" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Car Hire</h5>
+                <p class="display-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 
+              </div>
+            </div>
+            <div class="card" style="max-width: 18rem;">
+              <img src="{{ asset('images/Travel.png') }}" class="card-img-top" width="162px" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tours and Travel</h5>
+                <p class="display-6">This card has supporting text below as a natural lead-in to additional content.</p>
+
+              </div>
+            </div>
+            <div class="card" style="max-width: 18rem;">
+              <img src="{{ asset('images/Adventure.png') }}" class="card-img-top" width="162px" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Adventure</h5>
+                <p class="display-6">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  @include('inc.footer')
+
+      <!-- Footer  -->
+      <div class="container-fluid mt-4 px-5">
+        <div class="row">
+          <div class="col-4">
+            <h6> <a href="https://www.facebook.com/">Facebook</a> </h6>
+            <h6> <a href="https://twitter.com/home">Twitter</a> </h6>
+            <h6> <a href="https://www.linkedin.com/feed/">LinkedIn</a> </h6>
+            <h6> <a href="https://www.instagram.com/">Instagram</a> </h6>
+          </div>
+          <div class="col-4">
+            <h6> Email us for any inquirees you have about us </h6>
+            <h6> info@asperatravels.co.ke </h6>
+            <h6> Contact us </h6>
+            <h6> 0712345678 </h6>
+          </div>
+          <div class="col-4">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Subscribe here</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+            </form>
+          </div>
+        </div>
+        @include('inc.footer')
 </body>
 
 </html>

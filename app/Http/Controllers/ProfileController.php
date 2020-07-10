@@ -16,6 +16,8 @@ class ProfileController extends Controller
         // $reviews = Reviews::all(); //all records from the review table
         //$reviews - Reviews::latest()->get();
         $user_id = Auth::user()->id;
+        if ($user_id != null) {
+        }
         $country = ["France", "UAE", "Kenya", "None"];
         $city = ["Paris", "Dubai", "Nairobi", ""];
         $experiences = ["The Eiffel tower", "Bhurj Khalifa", "The Maasai Mara", "None"];
