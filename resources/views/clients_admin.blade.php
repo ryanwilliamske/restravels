@@ -44,12 +44,19 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                <h5 class="mb-0 text-white nav-user-name">{{ Auth::user()->fname }} {{ Auth::user()->lname }} </h5>
+                                <h5 class="mb-0 text-white nav-user-name"> </h5>
                                
                                </div>
                  <a class="dropdown-item" href="/home"><i class="fas fa-home mr-2">Home</i></a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
-                            </div>
+                 <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fas fa-power-off mr-2"></i>
+                                        {{ __('Logout') }}
+                                    </a>
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+      </div>
                         </li>
                     </ul>
                 </div>
@@ -94,10 +101,6 @@
                                 
                             </li> 
                                
-                            <li class="nav-item">
-                                <a class="nav-link" href="reviews_admin"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw  fas fa-thumbs-up"></i>Reviews</a>
-                                
-                            </li>  
                             <li class="nav-item">
                                 <a class="nav-link" href="blogs_admin"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw  fas fa-laptop"></i>Blogs</a>
                                 

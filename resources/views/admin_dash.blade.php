@@ -47,12 +47,19 @@
                             <div class="card-body">
                      <div class="nav-user-info">
                                
-                                    <h5 class="mb-0 text-white nav-user-name">{{ Auth::user()->fname }} {{ Auth::user()->lname }} </h5>
+                                    <h5 class="mb-0 text-white nav-user-name"> </h5>
                                
                                               </div>
                                 <a class="dropdown-item" href="/home"><i class="fas fa-home mr-2">Home</i></a>
                                     
-                                <a class="dropdown-item" href="logout"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fas fa-power-off mr-2"></i>
+                                        {{ __('Logout') }}
+                                    </a>
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
 
                                 
                             </div>
@@ -122,11 +129,6 @@
                             -->
                            
                             <li class="nav-item">
-                                <a class="nav-link" href="reviews_admin"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw  fas fa-thumbs-up"></i>Reviews</a>
-                                
-                            </li> 
-                           
-                            <li class="nav-item">
                                 <a class="nav-link" href="blogs_admin"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw  fas fa-laptop"></i>Blogs</a>
                                 
                             </li> 
@@ -155,22 +157,22 @@
                                  
                                     <div class="card" id="images">
                                         <!--Enter user first and last name here-->
-                                            <h5 style= "background-color: #0e0c28 ; color:#FFFFFF" class="card-header">{{ Auth::user()->fname }} {{ Auth::user()->lname }}</h5>
+                                            <h5 style= "background-color: #0e0c28 ; color:#FFFFFF" class="card-header"></h5>
                                             <div class="card-body" >
                                                 <!--User profile pic-->
                                                    <div id="profile_info" style="margin-right: auto" clas="">
                                                    <!--Display user info here from users table-->
                                                   <h class="text-primary">Email Address</h>
-                                                  <p class="text-dark">{{ Auth::user()->email }}</p>
+                                                  <p class="text-dark">Administartor@gmail.com</p>
 
                                                   <h class="text-primary">Address</h>
-                                                  <p class="text-dark">{{ Auth::user()->address }}</p>
+                                                  <p class="text-dark">Nairobi</p>
 
                                                   <h class="text-primary">City</h>
-                                                  <p class="text-dark">{{ Auth::user()->city }}</p>
+                                                  <p class="text-dark">Nairobi</p>
 
                                                   <h class="text-primary">Country</h>
-                                                  <p class="text-dark">{{ Auth::user()->country }}</p>
+                                                  <p class="text-dark">Kenya</p>
                                             </div>
                                         </div>
                                         

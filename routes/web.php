@@ -65,18 +65,7 @@ Route::get('/services_admin', function () {
 Route::get('/services_form', function () {
     return view('services_form');
 });
-//View for services categoriesin admin module
-Route::get('/services_categories', function () {
-    return view('services_categories');
-});
-//View for services categories form admin module
-Route::get('/categories_form', function () {
-    return view('categories_form');
-});
-//View for services categories form admin module
-Route::get('/reviews_admin', function () {
-    return view('reviews_admin');
-});
+
 //View for blogs_admin
 Route::get('/blogs_admin', function () {
     return view('blogs_admin');
