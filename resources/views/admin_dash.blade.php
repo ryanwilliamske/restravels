@@ -50,9 +50,14 @@
                                     <h5 class="mb-0 text-white nav-user-name">{{ Auth::user()->fname }} {{ Auth::user()->lname }} </h5>
                                
                                               </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-home mr-2"></i>{{ Route::get('/home')->name('home') }}</a>
+                                <a class="dropdown-item" href="/home"><i class="fas fa-home mr-2">Home</i></a>
                                     
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="/logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" ><i class="fas fa-power-off mr-2"></i>Logout</a>
+
+
+                            
+
                             </div>
                         </li>
                     </ul>
@@ -171,11 +176,7 @@
                                                   <p class="text-dark">{{ Auth::user()->country }}</p>
                                             </div>
                                         </div>
-                                         <div class="card-body border-top">
-                                            <h>Admin options:   </h>
-                                            <a href="#" class="btn btn-rounded btn-primary btn-sm">Edit</a>
-                                             <a href="#" class="btn btn-rounded btn-danger btn-sm">Delete this account</a>
-                                             </div>
+                                        
                                     </div>
                                   
                             </div>

@@ -29,8 +29,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::view('form','services_form');
+// Route::get('/clients_admin', 'AdminController@index');
+
+Route::view('form','serve');
 Route::post('submit','ServiceController@save');
+
+Route::delete('/clients_admin/delete/{id}', 'AdminController@delete')->name('clients_admin.delete');
+Route::delete('/services_admin/delete/{id}', 'AdminController@serviceremove')->name('services_admin.delete');
+Route::delete('/blogs_admin/delete/{id}', 'AdminController@destroy')->name('blogs_admin.delete');
+Route::delete('/transactions_admin/delete/{id}', 'AdminController@paykill')->name('transactions_admin.delete');
 
 
 /* This was only added for the purpose of displaying views on the browser */
@@ -58,8 +65,6 @@ Route::get('/services_admin', function () {
 Route::get('/services_form', function () {
     return view('services_form');
 });
-
-/*
 //View for services categoriesin admin module
 Route::get('/services_categories', function () {
     return view('services_categories');
@@ -68,7 +73,6 @@ Route::get('/services_categories', function () {
 Route::get('/categories_form', function () {
     return view('categories_form');
 });
-*/
 //View for services categories form admin module
 Route::get('/reviews_admin', function () {
     return view('reviews_admin');
@@ -77,3 +81,20 @@ Route::get('/reviews_admin', function () {
 Route::get('/blogs_admin', function () {
     return view('blogs_admin');
 });
+//BLOG ROUTES
+
+Route::get('/upload', function () {
+    return view('blogs.upload');
+});
+
+Route::get('/myblogs', 'CurrentUserBlogsController@index');
+Route::get('/adminblogs', 'AdminController@blogs');
+
+
+Route::get('/blogs/tags/{tag}','TagsController@index');
+Route::get('/blogdetails', function () {
+    return view('blogs.blogdetails');
+});
+Route::resource('blogs','PostsController');
+Route::post('/blogs/{post}/comments', 'CommentsController@store');
+//BLOG ROUTES

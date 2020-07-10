@@ -44,10 +44,10 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
-                                    <span class="status"></span><span class="ml-2">Logged in</span>
-                                </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-home mr-2"></i>Home</a>
+                                    <h5 class="mb-0 text-white nav-user-name">{{ Auth::user()->fname }} {{ Auth::user()->lname }} </h5>
+                               
+                               </div>
+                 <a class="dropdown-item" href="/home"><i class="fas fa-home mr-2">Home</i></a>
                            
                                 <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
@@ -148,24 +148,41 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
+                                                    <td>3</td>
                                                     <td>Linnet</td>
                                                     <td>2</td>
                                                     <td>Camping trip</td>
                                                     <td>Loads of fun</td>
-                                                    <td>2011/04/25</td>
+                                                    <td>23/03/2020</td>
+                                                       </tr>
+                                                       <tr>
+                                                    <td>4</td>
+                                                    <td>Jameson</td>
+                                                    <td>3</td>
+                                                    <td>Hiking trip</td>
+                                                    <td>The guide was excelent and we had a good time</td>
+                                                    <td>3/03/2020</td>
+                                                       </tr>
+
+                                                       <td>5</td>
+                                                    <td>Linnet</td>
+                                                    <td>4</td>
+                                                    <td>Beach trip</td>
+                                                    <td>White beaches, clear sky and great service</td>
+                                                    <td>10/02/2020</td>
+                                                       </tr>
+
+                                                       <tr>
+                                                    <td>6</td>
+                                                    <td>Alice</td>
+                                                    <td>5</td>
+                                                    <td>Game drive</td>
+                                                    <td>Had great scenery and saw beautiful animals</td>
+                                                    <td>17/04/2020</td>
                                                        </tr>
                                               
                                             </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                <th>User ID</th>
-                                                    <th>Service ID</th>
-                                                    <th>Service Name</th>
-                                                    <th>Review</th>
-                                                    <th>Date</th>
-                                                </tr>
-                                            </tfoot>
+                                            
                                         </table>
                                     </div>
                                 </div>
