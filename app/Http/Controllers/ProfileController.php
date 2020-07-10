@@ -27,15 +27,13 @@ class ProfileController extends Controller
         $city = ["Paris", "Dubai", "Nairobi", ""];
         $experiences = ["The Eiffel tower", "Bhurj Khalifa", "The Maasai Mara", "None"];
         $arr_exp_index = array_rand($experiences);
-        $experience =   [
-                'reviews' => $reviews,
-                
+        $experiences =   [
                 'experience' => $experiences[$arr_exp_index],
                 'country' => $country[$arr_exp_index],
                 'city' => $city[$arr_exp_index]
             ];  
        
-       return view('profile.show', compact('user_details', 'blogs', 'experience'));
+       return view('profile.show', compact('user_details', 'blogs', 'experiences'));
     }
 
     public function profileInfoUpdate()

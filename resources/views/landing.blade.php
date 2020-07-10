@@ -53,14 +53,46 @@
     </div>
   </div>
 
-  <!--Services Card-->
-  <div class="container-fluid">
-    <div class="row jumbotron" style="background-color: #51AECE">
-      <div class="card">
+  <div class="container-fluid mt-4">
+    <div class="row jumbotron justify-content-end">
+    <div class="col mt-5">
+      <p class="lead justify-content-start">Our packages are wholesome and for the entire family</p>
+      @if (Auth::guest())
+        <form action="{{ route('register') }}" method="get">
+      
+        <button type="submit" class="btn btn-outline-primary">Sign Up</button>
+      </form>
+      @endif
+      
 
+    </div>
+      <div class="card-deck">
+      <div class="card" style="max-width: 18rem;">
+        <img src="{{ asset('images/Car_hire.png') }}" class="card-img-top" width="162px" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">Car Hire</h5>
+          <p class="display-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          
+        </div>
+      </div>
+      <div class="card" style="max-width: 18rem;">
+        <img src="{{ asset('images/Travel.png') }}" class="card-img-top" width="162px" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">Tours and Travel</h5>
+          <p class="display-6">This card has supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+      </div>
+      <div class="card" style="max-width: 18rem;">
+        <img src="{{ asset('images/Adventure.png') }}" class="card-img-top" width="162px" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">Adventure</h5>
+          <p class="display-6">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
   <!--The code below enables for customer support-->
   
