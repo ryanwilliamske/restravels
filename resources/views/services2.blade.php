@@ -52,6 +52,7 @@
         justify-content: space-between;
     }
 </style>
+@include('inc.navbar')
 
 <div class="action-divs-container">
     <div class="action">
