@@ -45,3 +45,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search', 'ServiceController@search')->name('search');
 
 Route::get('/search/{service}', 'ServiceController@show')->name('services.show');
+
+Route::get('/services2', function () {
+    return view('services2');
+});
