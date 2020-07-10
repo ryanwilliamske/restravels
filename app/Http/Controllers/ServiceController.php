@@ -34,6 +34,7 @@ class ServiceController extends Controller
          *After results are displayed, the following single page
          *that dynamically displays individual items subject to the search 
          */
+        
 
         $service = Service::where('id', $service->id)->first();
         return view('services.show', compact('service'));

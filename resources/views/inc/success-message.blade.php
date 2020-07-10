@@ -1,4 +1,9 @@
 
+@if (session('toast_success'))
+<script>
+   swal("{{ session('toast_success') }}");
+</script>
+@endif
 <!--
     The following code snippet is aimed at automaticlly displaying error
     messages if any once a user enters a value less than 3 characters
