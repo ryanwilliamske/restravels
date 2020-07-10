@@ -4,6 +4,9 @@
     /* background-color:#51aece; */
     background-image: url(/images/wave.svg);
     background-repeat: no-repeat;
+    width: 98.0vw;
+    margin-left: -25px;
+    color:#212121;
 
    
   }
