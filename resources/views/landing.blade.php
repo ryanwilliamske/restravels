@@ -18,10 +18,10 @@
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand mr-auto" href="#">
-        <img src="{{ asset('storage/AST Logo.png') }}" alt="Aspera Travels Logo" width="50px" id="logo">
+        <img src="{{ asset('images/AST Logo.png') }}" alt="Aspera Travels Logo" width="50px" id="logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarReponsive">
-        <span class="navbar-toggler-icon"><img src="{{ asset('storage/menu_lines.svg') }}" alt="Aspera Travels Logo" width="20px" id=""></span>
+        <span class="navbar-toggler-icon"><img src="{{ asset('images/menu_lines.svg') }}" alt="Aspera Travels Logo" width="20px" id=""></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
@@ -53,13 +53,13 @@
         <p class="lead">Experience the best trips in safety and in style</p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
-        <img src="{{ asset('storage/Car_family.png') }}" alt="Aspera Travels Logo" width="900px" id="">
+        <img src="{{ asset('images/Car_family.png') }}" alt="Aspera Travels Logo" width="900px" id="">
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center mt-5">
         <p class="h6">Scroll for more</p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-        <img src="{{ asset('storage/scroll_arrows.png') }}" alt="Aspera Travels Logo" width="20px" id="">
+        <img src="{{ asset('images/scroll_arrows.png') }}" alt="Aspera Travels Logo" width="20px" id="">
       </div>
     </div>
   </div>
@@ -68,11 +68,11 @@
   <div class="container-fluid padding">
     <div class="row jumbotron pl-5 pb-0 mb-0">
       <div class="col-lg-3 col-xl-3 pl-3">
-        <img src="{{ asset('storage/Car_road.svg') }}" alt="Aspera Travels Logo" width="300px" id="">
+        <img src="{{ asset('images/Car_road.svg') }}" alt="Aspera Travels Logo" width="300px" id="">
       </div>
       <div class="col-lg-3 col-lg-3 pt-5 ml-5">
         <p class="h1">Fast and Effective</p>
-        <img src="{{ asset('storage/Speedometer.svg') }}" alt="Aspera Travels Logo" width="700px" id="">
+        <img src="{{ asset('images/Speedometer.svg') }}" alt="Aspera Travels Logo" width="700px" id="">
       </div>
       <div class="col-lg-3 col-lg-3 pt-5">
         <button type="button" class="btn btn-outline-primary">About us</button>
