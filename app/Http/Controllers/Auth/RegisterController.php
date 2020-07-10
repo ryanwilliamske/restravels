@@ -77,8 +77,5 @@ class RegisterController extends Controller
         ]);
     }
 
-     protected function authenticated(Request $request, User $user) {
-
-        return redirect()->intended($this->redirectPath())->with('success', 'Successfully Logged In');
-    }
+  
 }

@@ -6,16 +6,10 @@ use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
-/**
- * Configure route that will take us back to homepage
- */
 
- Route::get('/', function(){
+Route::get('/', 'HomeController@index');
 
-    // Alert::success('Success', 'Successfully Logged In');
 
-     return view('home');
- });
 
 Route::get('/about', function () {
     return view('about');
@@ -36,11 +30,14 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
 
     Route::get('/profile', 'ProfileController@index')->name('profile.show')->middleware('verified');
+
     /**
      * Route that allows for Profile Information
      * update
      */
     Route::post('/profile', 'ProfileController@profileInfoUpdate')->middleware('verified');
+
+    
 
 });
 
@@ -48,8 +45,6 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
 
 Auth::routes(['verify' => true]);
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 

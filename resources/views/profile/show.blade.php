@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row gutters-sm">
 
-
+        {{ $experience->city }}
         <!-- Provides a display of different profile options-->
         @include('profile_partials.tabOptions')
         

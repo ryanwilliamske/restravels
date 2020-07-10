@@ -23,9 +23,19 @@ class ProfileController extends Controller
         $user_details = auth()->user();
         $blogs = Blog::where('id', $user_details->id)->get();
 
-
+        $country = ["France", "UAE", "Kenya", "None"];
+        $city = ["Paris", "Dubai", "Nairobi", ""];
+        $experiences = ["The Eiffel tower", "Bhurj Khalifa", "The Maasai Mara", "None"];
+        $arr_exp_index = array_rand($experiences);
+        $experience =   [
+                'reviews' => $reviews,
+                
+                'experience' => $experiences[$arr_exp_index],
+                'country' => $country[$arr_exp_index],
+                'city' => $city[$arr_exp_index]
+            ];  
        
-       return view('profile.show', compact('user_details', 'blogs'));
+       return view('profile.show', compact('user_details', 'blogs', 'experience'));
     }
 
     public function profileInfoUpdate()
@@ -43,7 +53,9 @@ class ProfileController extends Controller
         ]);
 
         if ( $validator->fails()) {
-             return back()->with('toast_error', $validator->messages()->all()[0])->withInput();
+            toast($validator->messages()->all()[0],'error')->autoClose(3000);
+
+             return back();
         }
 
        /**
@@ -59,7 +71,9 @@ class ProfileController extends Controller
             'password' => Hash::make(request()->password)
         ]);
 
-        
-        return redirect('/profile')->with('toast_success', 'Update Successful!!');
+        toast('Update Successful!!','success')->autoClose(3000)->timerProgressBar();
+        return redirect('/profile');
     }
+
+
 }
