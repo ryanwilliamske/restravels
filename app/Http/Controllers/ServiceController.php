@@ -4,14 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service;
+use Illuminate\Support\Facades\Validator;
 
 class ServiceController extends Controller
 {
     public function search()
     {
-        request()->validate([
+        /**
+         * The validator checks whether
+         * the constraints being passed are valid
+         */
+        $validator = Validator::make( request()->all(), [
             'service' => 'required|min:3',
         ]);
+       
+        /**
+         * Failure notification
+         */
+        if ( $validator->fails()) {
+            toast($validator->messages()->all()[0],'error')->autoClose(3000);
+             return back();
+        }
 
         $service = request()->service;
         // $services = Service::where('service_name', 'like', "%$service%")
@@ -28,7 +41,7 @@ class ServiceController extends Controller
         return view('results_page', compact('services'));
     }
 
-    public function show(Service $service)
+    public function show($service)
     {
         /**
          *After results are displayed, the following single page
@@ -36,8 +49,8 @@ class ServiceController extends Controller
          */
         
 
-        $service = Service::where('id', $service->id)->first();
-        return view('services.show', compact('service'));
+        $service = Service::where('id', $service)->first();
+        return view('services.individual-service', compact('service'));
     }
 }
 

@@ -13,9 +13,13 @@
 
    @section('content')
 
+<div class="container mt-5 mb-6">
+
 
   <form action=" {{ route('profile.show') }} " method="post">
+    @csrf
     <div class="container">
+    
       <div class="row gutters-sm">
 
 
@@ -23,6 +27,7 @@
         @include('profile_partials.tabOptions')
         
         <div class="col-md-8">
+        
           <div class="card">
             
             <div class="card-body tab-content">
@@ -33,7 +38,7 @@
 
                   @include('profile_partials.yourInfo', compact('user_details'))
 
-                </div>
+              </div>
               
                   <!--Account Settings-->
 
@@ -51,13 +56,12 @@
                 </form>
                   <!-- View Your blogs -->
                   @include('profile_partials.yourBlogs', compact('blogs'))
-            </div>
-          </div>
-        </div>
-      </div>
 
-    </div>
-    
+          </div>
+       </div>
+     </div>
+
+   
        
    @endsection
 

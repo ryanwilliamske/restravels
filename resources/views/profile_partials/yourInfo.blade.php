@@ -1,5 +1,5 @@
 
-  @csrf
+
   <div class="form-group">
     <label for="fullName">Full Names</label>
       <div class="row">

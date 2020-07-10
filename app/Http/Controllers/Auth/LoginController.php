@@ -31,7 +31,7 @@ class LoginController extends Controller
    {
     
         Alert::success('Success', 'Successfully Logged In');
-        return redirect()->intended($this->redirectPath());
+        return redirect('/');
     }
     
 }

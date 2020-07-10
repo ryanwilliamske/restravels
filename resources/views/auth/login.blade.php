@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-      <title>Log In Page</title>
+      <title>Log In</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">

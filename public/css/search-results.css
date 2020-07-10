@@ -1,0 +1,47 @@
+body {
+    background: #eee
+}
+
+.icon-container {
+    border-radius: 7px
+}
+
+.stars i {
+    margin-right: 2px;
+    color: red;
+    font-size: 13px
+}
+
+.rating-number {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2px
+}
+
+.number-ratings {
+    font-size: 12px
+}
+
+.listing-title {
+    margin-bottom: -7px
+}
+
+.progress-bar {
+    background: green
+}
+
+.progress {
+    height: 16px
+}
+
+.tags span {
+    margin-right: 9px;
+    border: 1px solid s;
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    background-color: green;
+    color: #fff
+}

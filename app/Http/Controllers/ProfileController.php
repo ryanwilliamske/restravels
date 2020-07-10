@@ -41,10 +41,12 @@ class ProfileController extends Controller
             'email' => 'required|email',
             'password' => 'nullable|min:8,255',
             'confirm' => 'nullable|same:password',
-            'phone' => 'required|max:10|min:10|integer'
+            'phone' => 'required|numeric|digits:10'
         ]);
 
+        
         if ( $validator->fails()) {
+            
             toast($validator->messages()->all()[0],'error')->autoClose(3000);
              return back();
         }

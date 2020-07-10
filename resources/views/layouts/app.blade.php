@@ -27,6 +27,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <link href="{{ asset('css/result-not-found.css') }}" rel="stylesheet">
         
 
         @yield('extra-css')
@@ -35,7 +36,7 @@
 <body>
    
         @include('inc.nav')
-        <main class="container-fluid mb-5">
+        <main class="mb-5">
             @include('inc.success-message')
             @yield('content')
         </main>

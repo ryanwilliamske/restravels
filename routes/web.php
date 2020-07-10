@@ -10,22 +10,16 @@ use RealRashid\SweetAlert\Facades\Alert;
  * Configure route that will take us back to homepage
  */
 
- Route::get('/', function(){
-
-    // Alert::success('Success', 'Successfully Logged In');
-    // example:
-
-     return view('home');
- });
+ Route::get('/', 'HomeController@index');
 
 Route::get('/about', function () {
     return view('about');
 });
 
+/**
+ * This route directly leads to service pages
+ */
 
-Route::get('/services', function () {
-    return view('services');
-});
 
 
 /**
@@ -53,7 +47,16 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+/**
+ * This route leads to a general
+ * List of services that contain typed query
+ */
 
 Route::get('/search', 'ServiceController@search')->name('search');
 
-Route::get('/search/{service}', 'ServiceController@show')->name('services.show');
+
+/**
+ * This route lead to the specific service page 
+ * upon searching
+ */
+Route::get('/search/{service}', 'ServiceController@show')->name('services.individual-service');

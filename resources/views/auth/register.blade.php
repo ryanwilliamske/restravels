@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-      <title>Registration Page</title>
+      <title>Sign up</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">

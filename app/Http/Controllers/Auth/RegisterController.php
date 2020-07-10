@@ -51,6 +51,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
         return Validator::make($data, [
             'fname' => ['required', 'string', 'max:255'],
             'lname' => ['required', 'string', 'max:255'],
@@ -67,30 +68,17 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    // protected function create(array $data)
-    // {
-    //     return User::create([
-    //         'fname' => $data['fname'],
-    //         'lname' => $data['lname'],
-    //         'city' => $data['city'],
-    //         'email' => $data['email'],
-    //         'phone' => $data['phone'],
-    //         'password' => Hash::make($data['password']),
-    //     ]);
-    // }
-
-    public function Register(Request $request)
+    protected function create(array $data)
     {
-         User::create([
-            'fname' => $request->fname,
-            'lname' => $request->lname,
-            'city' => $request->city,
-            'email' => $request->email,
-            'phone' => $request->email,
-            'password' => Hash::make($request->password),
+         Alert::success('Success', 'Successfully Logged In');
+        return User::create([
+            'fname' => $data['fname'],
+            'lname' => $data['lname'],
+            'city' => $data['city'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'password' => Hash::make($data['password']),
         ]);
-        
-        return redirect()->intended($this->redirectPath());
     }
      
 }

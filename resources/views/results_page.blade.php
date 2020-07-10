@@ -6,43 +6,28 @@
 @section('extra-css')
     <!-- Search bar css modifier -->
     <link rel="stylesheet" href="{{ asset('css/algolia.css') }}"> 
-    
+    <link rel="stylesheet" href="{{ asset('css/search-results.css') }}">
 @endsection
 
 
 @section('content')
+
+    <!--
+        We'll display two outlooks, page not found and a results
+        page all based on an if else condition
+    -->
     
-     <div class="search-results-container container">
+    @if ( count($services) > 0 )
+    
+        @include('services.service-partials.service-results', compact('services'))
 
- 
-         <h1 class="d-flex justify-content-center mb-5"> Search Results </h1>
+    @else
 
-         <p class="results-count"> {{ $services->total() }} result(s) for "{{ request()->service }}" </p>
-         <table class="table" >
-            <thead>
-                <tr>
-                <th scope="col">Service Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                </tr>
-            </thead>
-            <tbody>
-         
-            @forelse ($services as $service)
-                <tr>
-                <th scope="row"> <a href="{{ route('services.show', $service->id)  }}"> {{ $service->service_name }} </a> </th>
-
-                 <td> <a href="{{ route('services.show', $service->id) }}">{{ \Illuminate\Support\Str::limit($service->service_descript, 80) }} </a> </td> 
-                <td> {{ $service->service_price }} </td> 
-                </tr>
-                @empty
-                    <div style="tex-align: left">No items found</div>
-            @endforelse
-
-
-                  </tbody>
-        </table>
-         
+        <!-- Incase Service Is not found -->
+        @include('errors-partials.result-not-found')
+            
+    @endif
+   
         
         {{ $services->appends( request()->input())->links() }}
 
@@ -56,6 +41,7 @@
         <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
         <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
         <script src="{{ asset('js/algolia.js') }}"></script>
-    
-    
+        <script src="{{ asset('js/search-results.js') }}"></script>
+
 @endsection
+
