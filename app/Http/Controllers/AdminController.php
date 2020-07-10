@@ -26,10 +26,12 @@ return view('admin_dash');
     // 	return view('/clients_admin')->with('success', 'Data Deleted');
 
     // }
+    
+    //delete the users details
     public function delete($id){
     $userstuff = 	User::find($id);
     $userstuff->delete();
-    return view('/clients_admin')->with('success',  'Deleted!');;
+    return redirect('/clients_admin')->with('success',  'Deleted!');;
 
 }
 
@@ -38,6 +40,7 @@ return view('admin_dash');
         $posts = Post::all()->sortByDesc('created_at');
         return view('blogs_admin', compact('posts'));
     }
+    //delete for the blogs
     public function destroy($id)
     {
         $post= Post::find($id);
@@ -47,12 +50,14 @@ return view('admin_dash');
         $post->delete();
         return redirect('/blogs_admin')->with('success', 'Post Deleted!');
     }
+    //delete the services
      public function serviceremove($id){
     $servicestuff =    Serve::find($id);
     $servicestuff->delete();
-    return view('/services_admin');
+    return redirect('/services_admin')->with('success',  'Deleted!');
 
 }
+    //delete for payment
 public function paykill($id)
     {
         $transactstuff= Payment::find($id);
