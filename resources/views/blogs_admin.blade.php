@@ -48,7 +48,7 @@
                                
                                </div>
                  <a class="dropdown-item" href="/home"><i class="fas fa-home mr-2">Home</i></a>
-                 <a class="dropdown-item" href="{{ route('logout') }}"
+                              <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fas fa-power-off mr-2"></i>
                                         {{ __('Logout') }}

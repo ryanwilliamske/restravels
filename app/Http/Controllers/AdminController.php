@@ -19,18 +19,11 @@ return view('admin_dash');
     }
 
 
-  
-     // public function destroy($id){
-    // 	$userstuff = User::find($id);
-    // 	$userstuff->delete();
-    // 	return view('/clients_admin')->with('success', 'Data Deleted');
-
-    // }
-    //delete user details
+    //delete the users details
     public function delete($id){
     $userstuff = 	User::find($id);
     $userstuff->delete();
-    return redirect('/clients_admin')->with('success',  'Deleted!');
+    return redirect('/clients_admin')->with('success',  'Deleted!');;
 
 }
 
@@ -49,14 +42,14 @@ return view('admin_dash');
         $post->delete();
         return redirect('/blogs_admin')->with('success', 'Post Deleted!');
     }
-    //delete the services created
+    //delete the services
      public function serviceremove($id){
     $servicestuff =   Serve::find($id);
     $servicestuff->delete();
     return redirect('/services_admin')->with('success',  'Deleted!');
 
 }
-//delete the transactions made
+    //delete for payment
 public function paykill($id)
     {
         $transactstuff= Payment::find($id);
