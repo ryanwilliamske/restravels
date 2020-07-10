@@ -37,6 +37,26 @@ Route::post('/profile', 'ProfileController@store');
 Route::get('/sign_in', function () {
     return view('sign_in');
 });
+//BLOG ROUTES
+
+Route::get('/upload', function () {
+    return view('blogs.upload');
+});
+Route::get('/upload', 'PostsController@uploadpage');
+Route::get('/layoutf', function () {
+       return view('layouts.blogsfinallayout');
+   });
+
+
+Route::get('/myblogs', 'CurrentUserBlogsController@index');
+
+Route::get('/blogs/tags/{tag}','TagsController@index');
+Route::get('/blogdetails', function () {
+    return view('blogs.blogdetails');
+});
+Route::resource('blogs','PostsController');
+Route::post('/blogs/{post}/comments', 'CommentsController@store');
+//BLOG ROUTES
 
 Auth::routes();
 

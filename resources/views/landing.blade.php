@@ -31,6 +31,9 @@
           <li class="nav-item ">
             <a class="nav-link" href="{{ url('/about') }}">About Us</a>
           </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ url('/blogs') }}">Blogs Feed</a>
+            </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{ url('/services') }}">Services</a>
           </li>

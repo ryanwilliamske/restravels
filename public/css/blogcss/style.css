@@ -1,0 +1,470 @@
+/*
+ * Author 	: HIMANSHU GUPTA 
+ * Email 		: himanshucse2012@gmail.com
+ * Website	:	http://www.indioweb.in/portfolio
+ */
+ 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+ 
+/*
+ * Basic CSS starts 
+ */
+
+body{
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 400;
+	color: #545454;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 600;
+}
+
+p{
+	margin:0;
+	padding:0;
+	color: #787878;
+}
+
+a{
+	text-decoration: none;
+	color: #d65814;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #a93c01;
+}
+
+a:hover,a:active,a:focus {
+	outline: 0;
+}
+
+hr{
+
+}
+
+:focus {
+	outline:none;
+}
+
+::-moz-focus-inner {
+	border:0;
+}
+
+/* 
+ * Basic CSS ends 
+ */
+
+header .navbar { 
+	margin: 0;
+	background: #d65814;
+	border-radius: 0;
+	border-bottom: 2px solid rgba(0,0,0,0.2); 
+	box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
+header .navbar-default .navbar-nav>li>a {
+	margin: 15px 3px;
+	padding-top: 6px;
+	color: #fff;
+	padding-bottom: 6px;
+	border-radius: 2px;
+}
+
+header .navbar-default .navbar-nav>li>a:hover, 
+header .navbar-default .navbar-nav>li>a:focus,
+header .navbar-default .navbar-nav>li.open>a:hover, 
+header .navbar-default .navbar-nav>li.open>a:focus {
+	background: #fff;
+}
+
+header .navbar-nav .dropdown-menu {
+	top: 57px;
+	border-radius: 3px;
+}
+header .navbar-nav .dropdown-menu:after, 
+header .navbar-nav .dropdown-menu:before {
+	bottom: 100%;
+	right: 20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+header .navbar-nav .dropdown-menu:after {
+	border-color: rgba(240, 253, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 7px;
+}
+
+header .navbar-nav .dropdown-menu:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #d65814;
+	border-width: 8px;
+	margin-right: -1px;
+}
+header .navbar-brand {
+	padding: 0;
+	height: auto;
+}
+header .navbar-brand img {
+	position: relative;
+	top: 5px;
+	max-width: 165px;
+}
+
+/*
+ * Banner 
+ */
+ 
+.banner {
+	background: #e47133;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	text-align: center;
+}
+
+.banner h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 28px;
+	line-height: 35px;
+	color: #eee;
+	text-transform: capitalize;
+}
+.banner p {
+	max-width: 700px;
+	margin: 0 auto;
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 24px;
+	color: #ddd;
+	text-transform: uppercase;
+	letter-spacing: 0.055em;
+}
+
+/* 
+ * after banner content
+ */
+ 
+.after-banner {
+	padding-top: 60px;
+}
+
+.after-banner .ab-item {
+	max-width: 360px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.after-banner .ab-item h3 {
+	margin-top: 0;
+	font-size: 24px;
+}
+
+.after-banner .ab-item  p {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.025em;
+}
+
+/*
+ * default heading
+ */
+
+.default-heading  {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.default-heading h2{
+	margin-top: 0;
+	font-size: 30px;
+	color: #676767;
+	font-weight: 400;
+}
+
+/*
+ * events
+ */
+
+.event {
+	padding-top: 60px;
+}
+
+.event .event-item {
+	max-width: 360px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.event .event-item img {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.event .event-item h4 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.event .event-item .sub-text {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 13px;
+	color: #999;
+	font-style: italic;
+}
+
+.event .event-item  p {
+	font-size: 13px;
+	line-height: 24px;
+	letter-spacing: 0.025em;
+}
+
+/*
+ * blog
+ */
+
+.blog {
+	padding-top: 60px;
+}
+
+.blog .entry {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.blog .entry  h3 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.blog .entry .meta {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 13px;
+	color: #787878;
+}
+
+.blog .entry  p {
+	font-size: 13px;
+	line-height: 23px;
+}
+
+.blog .text-center .btn {
+	margin-top: 30px;
+}
+
+/*
+ * subscribe
+ */
+
+.subscribe {
+	margin-top: 60px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.subscribe .sub-content {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.subscribe .sub-content h3 {
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.subscribe .sub-content .form-control {
+	box-shadow: none !important;
+	border: 1px solid #ccc;
+	height: 50px;
+	font-size: 18px;
+}
+
+.subscribe .sub-content form .btn {
+	padding: 0 20px;
+	height: 50px;
+	line-height: 49px;
+	font-size: 18px;
+}
+
+/*
+ * team
+ */
+
+.team {
+	padding-top: 60px;
+}
+
+.team .member {
+	max-width: 300px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.team .member img {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.team .member  h3 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 22px;
+}
+
+.team .member .dig {
+	display: block;
+	font-size: 13px;
+	color: #787878;
+}
+
+/*
+ * login & registration page content
+ */
+
+.login-area,
+.register-area {
+	max-width: 450px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.login-area h3,
+.register-area h3 {
+	margin-top: 0;
+	margin-bottom: 25px;
+	font-size: 22px;
+	color: #fff;
+}
+
+.login-area form,
+.register-area form {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+.login-area form label ,
+.register-area form label { color: #fff; }
+.login-area form .form-control,
+.register-area form .form-control {
+	box-shadow: none !important;
+	border: 1px solid #d3d3d3;
+	border-radius: 2px;
+	height: 45px;
+	font-size: 16px;
+}
+.login-area form .btn {
+	display: block;
+	width: 100%;
+	margin-top: 15px;
+}
+.register-area form .btn {
+	margin-top: 5px;
+}
+
+/*
+ * footer
+ */
+
+footer {
+	margin-top: 80px;
+	padding: 50px 0;
+	background: #d65814;
+	text-align: center;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+footer.ffoot {margin-top: 0;}
+footer p {
+	font-size: 13px;
+	line-height: 25px;
+	color: #fff;
+}
+footer p a { 
+	font-size: 13px;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.055em;
+	color: #fff;
+}
+footer p a:hover { color: #a93c01; }
+footer .social a {
+	display: inline-block;
+	margin: 0 2px;
+	margin-top: 5px;
+	padding: 2px;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background: #fff;
+	font-size: 14px;
+	border-radius: 50%;
+}
+
+footer .social a  i {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	border-radius: 50%;
+	border: 1px dashed #d65814;
+}
+
+footer .copy-right {
+	margin-top: 5px;
+}
+
+/*
+ * Responsive CSS 
+ */
+
+/*
+ * Mobile phones 
+ */
+@media (max-width: 480px){
+
+}
+
+/*
+ * Tablets 
+ */
+@media (max-width: 767px){
+	header .navbar-brand img { max-width: 140px; top: 3px; }
+	header .navbar-nav .dropdown-menu:after, 
+	header .navbar-nav .dropdown-menu:before { display: none;}
+	header .navbar-nav .dropdown-menu li a { color: #fff !important;}
+	header .navbar-default .navbar-toggle .icon-bar {background: #fff;	}
+	header .navbar-collapse { border: 0; box-shadow: none; }
+	header .navbar-default .navbar-toggle,
+	header .navbar-default .navbar-toggle:hover,
+	header .navbar-default .navbar-toggle:focus	{
+		background: transparent;
+		border-color: #fff;
+	}
+	
+	.default-heading {text-align: center;}
+}
+
+/*
+ * Desktop 
+ */
+@media (max-width: 991px){
+
+}
