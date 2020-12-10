@@ -5,7 +5,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/blogcss/sth.css')}}">
 
-
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -40,7 +40,7 @@
 
                     <div class="col-sm-10">
                         {{ Form::label('body', 'Body', ['class' => 'control-label']) }}
-                        {{ Form::textarea('body', '', ['class' => 'form-control'])}}
+                        {{ Form::textarea('body', '', ['class' => 'form-control', 'id' => 'summary-ckeditor'])}}
                     </div>
                 </div>
                 <div class="form-group">
@@ -60,6 +60,11 @@
         </div>
     </div>
 </div>
+<script>
+    CKEDITOR.replace( 'summary-ckeditor' );
+</script>
+
+
 
 </body>
 </html>
